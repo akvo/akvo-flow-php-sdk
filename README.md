@@ -6,9 +6,6 @@
 
 <br />
 <p align="center">
-  <a href="https://github.com/akvo/akvo-flow-php-sdk">
-    <img src="https://www.thinkdataservices.com/wp-content/uploads/2018/06/Akvo-logo-L-e1529533863892.png">
-  </a>
 
   <h3 align="center">Akvo Flow PHP SDK</h3>
 
