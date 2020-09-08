@@ -86,8 +86,8 @@ AKVOFLOW_FORM_URL='https://tech-consultancy.akvo.org/akvo-flow-web'
 
 More details:
 
-- [Akvo Flow Sync API] (https://github.com/akvo/akvo-flow-api/wiki/Akvo-Flow-Sync-API)
-- [Akvo Flow REST API] (https://github.com/akvo/akvo-flow-api/wiki/Akvo-Flow-REST-API)
+- [Akvo Flow Sync API](https://github.com/akvo/akvo-flow-api/wiki/Akvo-Flow-Sync-API)
+- [Akvo Flow REST API](https://github.com/akvo/akvo-flow-api/wiki/Akvo-Flow-REST-API)
 
 
 ### Running Commands
