@@ -13,9 +13,9 @@
     ],
     "minimum-stability": "dev",
     "autoload": {
-        "psr-4": {
-            "Akvo\\": "src/"
-        }
+        "classmap": [
+            "src/"
+        ]
     },
     "extra": {
         "laravel": {
