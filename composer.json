@@ -4,11 +4,11 @@
     "require": {
         "guzzlehttp/guzzle": "^6.3"
     },
-    "license": "MIT",
+    "license": "GNU",
     "authors": [
         {
-            "name": "Deden Bangkit",
-            "email": "deden@akvo.org"
+            "name": "Akvo",
+            "email": "devops@akvo.org"
         }
     ],
     "minimum-stability": "dev",
