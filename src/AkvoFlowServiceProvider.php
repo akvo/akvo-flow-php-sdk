@@ -1,6 +1,6 @@
 <?php
 
-namespace Akvo\Commands;
+namespace Akvo;
 
 use Illuminate\Support\ServiceProvider;
 

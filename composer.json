@@ -1,6 +1,7 @@
 {
     "name": "akvo/akvo-flow-php-sdk",
     "description": "A PHP Artisan service provider for the Akvo Flow",
+    "keywords": ["akvo", "akvoflow", "flow"],
     "require": {
         "guzzlehttp/guzzle": "^6.3"
     },
@@ -9,6 +10,10 @@
         {
             "name": "Akvo",
             "email": "devops@akvo.org"
+        },
+        {
+            "name": "Deden",
+            "email": "deden@akvo.org"
         }
     ],
     "minimum-stability": "dev",
@@ -19,7 +24,7 @@
     },
     "extra": {
         "laravel": {
-            "providers": ["Akvo\\Commands\\AkvoFlowServiceProvider"]
+            "providers": ["Akvo\\AkvoFlowServiceProvider"]
         }
     }
 }
