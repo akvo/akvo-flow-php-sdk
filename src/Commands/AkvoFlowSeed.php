@@ -71,7 +71,7 @@ class AkvoFlowSeed extends Command
             return;
         }
         $api = new FlowApi($auth);
-        $this->interactive($api, "folders", true);
+        $this->interactive($api, "folders", true, '');
     }
 
     /**
@@ -79,7 +79,7 @@ class AkvoFlowSeed extends Command
      *
      * @return function
      */
-    public function interactive($api, $endpoint, $get)
+    public function interactive($api, $endpoint, $get, $path)
     {
         $folders = $get ? $api->get($endpoint) : $api->fetch($endpoint);
         $options = collect();
@@ -102,18 +102,23 @@ class AkvoFlowSeed extends Command
             $selection = $this->choice("Please select folder or survey", $options->toArray());
             $id = Str::afterLast($selection, '| ');
             $type= Str::beforeLast($selection, ' ->');
+            $new_path = Str::beforeLast($selection, ' |');
+            $new_path = Str::afterLast($new_path, '-> ');
+            $path .= '/'.$new_path;
             $endpoint = env('AKVOFLOW_API_URL').'/';
             $endpoint .= env('AKVOFLOW_INSTANCE');
             if ($type === "Folders") {
                 $endpoint .= '/folders?parent_id='.$id;
-                return $this->interactive($api, $endpoint, false);
+                return $this->interactive($api, $endpoint, false, $path);
             }
             if ($type === "Surveys") {
                 $endpoint .= '/surveys/'.$id;
                 $data = $api->fetch($endpoint);
+                $path = $path === '' ? '/' : $path;
                 $survey = Survey::updateOrCreate([
                     'id' => (int) $data['id'],
                     'name' => $data['name'],
+                    'path' => $path,
                     'registration_id' => (int) $data['registrationFormId']
                 ]);
                 foreach($data['forms'] as $form) {

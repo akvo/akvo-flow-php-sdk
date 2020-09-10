@@ -10,7 +10,7 @@ class Survey extends Model
     public $incrementing = false;
 
     protected $hidden = ['created_at', 'updated_at'];
-    protected $fillable = ['id', 'name', 'registration_id'];
+    protected $fillable = ['id', 'name', 'registration_id', 'path'];
 
     public function forms()
     {

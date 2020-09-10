@@ -23,6 +23,7 @@ class AkvoFlowDatabase extends Migration
             $table->unsignedBigInteger('id');
             $table->text('name');
             $table->unsignedBigInteger('registration_id')->nullable();
+            $table->text('path');
             $table->timestamps();
             $table->primary('id');
         });
