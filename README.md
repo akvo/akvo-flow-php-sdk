@@ -81,7 +81,7 @@ AKVOFLOW_API_URL='https://api-auth0.akvo.org/flow/orgs'
 AKVOFLOW_INSTANCE='organisation_subdomain'
 AKVOFLOW_USERNAME='youremail@gmail.org'
 AKVOFLOW_PASSWORD=''
-AKVOFLOW_FORM_URL='https://tech-consultancy.akvo.org/akvo-flow-web'
+AKVOFLOW_FORM_URL='https://tech-consultancy.akvo.org/akvo-flow-web-api'
 ```
 
 More details:
