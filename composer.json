@@ -3,7 +3,7 @@
     "description": "A PHP Artisan service provider for the Akvo Flow",
     "keywords": ["akvo", "akvoflow", "flow"],
     "require": {
-        "guzzlehttp/guzzle": "^6.3"
+        "guzzlehttp/guzzle": "^7.0.1"
     },
     "license": "MIT",
     "authors": [
