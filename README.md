@@ -104,22 +104,71 @@ Once you run `php artisan akvo:migrate` you will see several tables migrated to 
 
 The Eloquent ORM included with the package provides a simple ActiveRecord implementation for working with your Akvo Flow database. Each database table has a corresponding "Model" which is used to interact with the table. You can load all the **[Akvo Flow Models](https://github.com/akvo/akvo-flow-php-sdk/tree/master/src/Models)** directly to your Controller.
 
-Example:
-
 ```php
-use Akvo\Models\Survey
-use Akvo\Models\Answer
+use Akvo\Models\Survey;
+use Akvo\Models\Answer;
 
-public function surveyAndForms(Survey $surveys){
+public function surveyAndForms(Survey $surveys)
+{
   return $surveys->with('forms');
 }
 
-public function answerAndForm(Answer $answer){
+public function answerAndForm(Answer $answer)
+{
   return $answer->load('question.form');
 }
 ```
 
-If you wish to extend different Schema to Models, you could also extend them into your Model directory (Laravel 8).
+If you wish to extend different Schema to Models, you could also extend them into your Model directory (Laravel 7+).
+
+Before:
+
+```json
+[{
+  "id":4310019,
+  "name": "Just an example survey (Test)",
+  "registration_id": 24390001,
+  "path": "/Farmfit surveys/Cases 2019/Agri-Wallet (Kenya)/Survey Agri-Wallet",
+  "created_at": "2020-09-10T19:17:22",
+  "updated_at": "2020-09-10T19:17:22"
+}]
+```
+
+Extend `App\Model`, adding new object named __short__:
+
+```php
+Namespace App\Model;
+
+use Illuminate\Support\Str;
+use Akvo\Models\Survey as AkvoSurvey;
+
+class Survey extends AkvoSurvey
+{
+  $protected $appends = ['short'];
+  
+  public function getShortAttribute()
+  {
+        $text = trim(preg_replace('!\s+-!', ' -', $this->name));
+        $text = Str::beforeLast($text, ' (');
+        return Str::upper($text);
+  }
+}
+
+```
+
+Results:
+
+```json
+[{
+  "id":4310019,
+  "name": "Just an example survey (Test)",
+  "registration_id": 24390001,
+  "path": "/Farmfit surveys/Cases 2019/Agri-Wallet (Kenya)/Survey Agri-Wallet",
+  "short": "Just an example survey",
+  "created_at": "2020-09-10T19:17:22",
+  "updated_at": "2020-09-10T19:17:22"
+}]
+```
 
 ### Rollback
 
