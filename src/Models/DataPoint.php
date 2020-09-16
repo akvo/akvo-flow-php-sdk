@@ -18,7 +18,7 @@ class DataPoint extends Model
         return $this->belongsTo('Akvo\Models\Survey');
     }
 
-    public function formInstance()
+    public function formInstances()
     {
         return $this->hasMany('Akvo\Models\FormInstance');
     }

@@ -63,7 +63,7 @@ class AkvoFlowSeed extends Command
                 return;
             }
         }
-        $this->info("All environment variable is set");
+        $this->info("All environment variables are set");
         $auth = new Auth();
         $token = $auth->getToken();
         if (!$token) {

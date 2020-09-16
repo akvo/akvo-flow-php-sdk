@@ -19,7 +19,7 @@ class Answer extends Model
         return $this->belongsTo('Akvo\Models\Question');
     }
 
-    public function options()
+    public function option()
     {
         return $this->hasOne('Akvo\Models\AnswerOption');
     }
