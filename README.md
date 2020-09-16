@@ -1,3 +1,4 @@
+[![Packagist][packagist-shield]][packagist-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -187,6 +188,9 @@ Akvo is a not-for-profit internet and software developer, headquartered in Amste
 Akvo offers data consultancy and a digital platform, to support our partner's design their projects with building something on-top, the solutions are built with robust products like Akvo’s as the core workhorse, and then a layer of customisations which goes sufficiently close to aligning with the partner requirements.
 
 <!-- MARKDOWN LINKS & IMAGES -->
+
+[packagist-shield]: https://img.shields.io/packagist/dt/akvo/akvo-flow-php-sdk.svg?style=flat-square
+[packagist-url]: https://packagist.org/packages/akvo/akvo-flow-php-sdk
 [contributors-shield]: https://img.shields.io/github/contributors/akvo/akvo-flow-php-sdk.svg?style=flat-square
 [contributors-url]: https://github.com/akvo/akvo-flow-php-sdk/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/akvo/akvo-flow-php-sdk.svg?style=flat-square
