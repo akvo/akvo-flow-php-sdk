@@ -2,8 +2,7 @@
 
 ## 1.0.4 - 2020-16-08
 
-* Change methods for Answer and Datapoint classes
-Ref: https://github.com/akvo/akvo-flow-php-sdk/commit/6cdfae880890bcfa85dd57cc698f0abcfa126e8f
+* Change methods for Answer and Datapoint classes. Refference: [`6cdfae8`](https://github.com/akvo/akvo-flow-php-sdk/commit/6cdfae880890bcfa85dd57cc698f0abcfa126e8f)
 
 ## 1.0.3 - 2020-14-08
 
