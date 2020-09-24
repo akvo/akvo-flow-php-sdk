@@ -20,7 +20,7 @@ class AkvoFlowSeed extends Command
      *
      * @var string
      */
-    protected $signature = 'akvo:seed {--instance="Akvo Flow Instance (e.g development)"}';
+    protected $signature = 'akvo:seed {--only-surveys}';
 
     /**
      * The console command description.
@@ -130,8 +130,10 @@ class AkvoFlowSeed extends Command
                 }
                 $formSeeder = new FormSeeder($api);
                 $formSeeder->seed();
-                $dataPointSeeder = new DataPointSeeder($api, $id);
-                $dataPointSeeder->seed($data);
+                if (!$this->arguments('only-surveys')) {
+                    $dataPointSeeder = new DataPointSeeder($api, $id);
+                    $dataPointSeeder->seed($data);
+                }
                 $continue = $this->confirm("Config added, do you want to continue?");
                 if ($continue) {
                     return $this->handle();

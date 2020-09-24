@@ -96,6 +96,7 @@ More details:
 To view a list of all available Akvo Flow commands, you may use the list command with [`php artisan` -  Laravel Artisan](https://laravel.com/docs/8.x/artisan).
 - `akvo:migrate`, Migrate DB Schema to store Akvo Flow contents.
 - `akvo:seed`, Seed Database with Akvo Flow data via [Akvo Flow REST API](https://github.com/akvo/akvo-flow-api/wiki/Akvo-Flow-REST-API)
+    - `akvo:seed --only-surveys`, Seed surveys without it's datapoints.
 
 ### Database Schema
 
