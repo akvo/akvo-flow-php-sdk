@@ -83,6 +83,7 @@ AKVOFLOW_INSTANCE='organisation_subdomain'
 AKVOFLOW_USERNAME='youremail@gmail.org'
 AKVOFLOW_PASSWORD=''
 AKVOFLOW_FORM_URL='https://tech-consultancy.akvo.org/akvo-flow-web-api'
+AKVOFLOW_METHOD='fetch' # fetch (using form cache) / update (get latest form), default: update
 ```
 
 More details:
